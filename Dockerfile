@@ -14,5 +14,7 @@ RUN pip install --trusted-host pypi.python.org Flask
 RUN pip install requests
 RUN pip install waitress
 
+EXPOSE 7575
+
 # Run server.py when the container launches
 CMD ["waitress-serve", "server:app"]
