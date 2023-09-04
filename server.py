@@ -14,8 +14,8 @@ def callback():
 
 
 @app.route("/")
-def get_client_ip():
-    return "response.text"
+def test():
+    return "hi"
 
 
 if __name__ == "__main__":
