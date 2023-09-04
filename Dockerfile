@@ -17,4 +17,4 @@ RUN pip install waitress
 EXPOSE 7575
 
 # Run server.py when the container launches
-CMD ["waitress-serve", "server:app"]
+CMD ["waitress-serve", "--listen=*:7575", "server:app"]
