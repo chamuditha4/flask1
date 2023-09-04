@@ -13,8 +13,6 @@ ADD . /app
 RUN pip install --trusted-host pypi.python.org Flask
 RUN pip install requests
 
-# Make port 7575 available to the world outside this container
-EXPOSE 7575
 
 # Run server.py when the container launches
 CMD ["python", "server.py"]
