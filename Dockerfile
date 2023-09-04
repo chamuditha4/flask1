@@ -15,4 +15,4 @@ RUN pip install requests
 RUN pip install waitress
 
 # Run server.py when the container launches
-CMD ["waitress-serve", "--listen=*:7575", "server:app"]
+CMD ["waitress-serve", "server:app"]
