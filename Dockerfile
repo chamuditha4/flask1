@@ -12,9 +12,9 @@ ADD . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org Flask
 RUN pip install requests
-RUN pip install gunicorn
+RUN pip install waitress
 
 EXPOSE 7575
 
 # Run server.py when the container launches
-CMD ["gunicorn", "server:app", "--bind", "0.0.0.0:7575", "--timeout", "300", "--workers", "4"]
+CMD ["waitress-serve", "server:app"]
