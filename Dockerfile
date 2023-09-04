@@ -12,7 +12,7 @@ ADD . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org Flask
 RUN pip install requests
-
+RUN pip install waitress
 
 # Run server.py when the container launches
-CMD ["python", "server.py"]
+CMD ["waitress-serve", "--listen=*:7575", "server:app"]
