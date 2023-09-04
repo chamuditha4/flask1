@@ -15,9 +15,7 @@ def callback():
 
 @app.route("/")
 def get_client_ip():
-    response = requests.get('http://api.ipify.org')
-    print(response.text)
-    return response.text
+    return "response.text"
 
 
 if __name__ == "__main__":
